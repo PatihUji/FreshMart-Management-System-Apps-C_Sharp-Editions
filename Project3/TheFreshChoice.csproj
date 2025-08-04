@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54E0B131-2C5C-40AC-99C8-7DE58FE66BFC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project3</RootNamespace>
+    <AssemblyName>Project3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard\DashboardAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardAdmin.Designer.cs">
+      <DependentUpon>DashboardAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\DashboardCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardCS.Designer.cs">
+      <DependentUpon>DashboardCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\DashboardKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardKasir.Designer.cs">
+      <DependentUpon>DashboardKasir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\DashboardQC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardQC.Designer.cs">
+      <DependentUpon>DashboardQC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DBConnect.cs" />
+    <Compile Include="Database\TheFreshChoice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TheFreshChoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\TransaksiPengiriman\LaporanPengiriman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laporan\TransaksiPengiriman\LaporanPengiriman.Designer.cs">
+      <DependentUpon>LaporanPengiriman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\TransaksiPenjualan\LaporanPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laporan\TransaksiPenjualan\LaporanPenjualan.Designer.cs">
+      <DependentUpon>LaporanPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\TransaksiRetur\LaporanReturBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laporan\TransaksiRetur\LaporanReturBarang.Designer.cs">
+      <DependentUpon>LaporanReturBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\TransaksiStok\LaporanStokKeluar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laporan\TransaksiStok\LaporanStokKeluar.Designer.cs">
+      <DependentUpon>LaporanStokKeluar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\jenis produk\JenisProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\jenis produk\JenisProduk.Designer.cs">
+      <DependentUpon>JenisProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Karyawan\FormKaryawan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Karyawan\FormKaryawan.Designer.cs">
+      <DependentUpon>FormKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Karyawan\Karyawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Karyawan\Karyawan.Designer.cs">
+      <DependentUpon>Karyawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Karyawan\KaryawanADT.cs" />
+    <Compile Include="Master\Metode Pembayaran\MetodePembayaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Metode Pembayaran\MetodePembayaran.Designer.cs">
+      <DependentUpon>MetodePembayaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Produk\FormProduk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Produk\FormProduk.Designer.cs">
+      <DependentUpon>FormProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Produk\Produk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Produk\Produk.Designer.cs">
+      <DependentUpon>Produk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Promo\Promo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Promo\Promo.Designer.cs">
+      <DependentUpon>Promo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Promo\PromoADT.cs" />
+    <Compile Include="Master\Setting\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Setting\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SideBar\SideBarAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SideBar\SideBarAdmin.Designer.cs">
+      <DependentUpon>SideBarAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SideBar\navBarAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SideBar\navBarAdmin.Designer.cs">
+      <DependentUpon>navBarAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SideBar\SideBarCustomerService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SideBar\SideBarCustomerService.Designer.cs">
+      <DependentUpon>SideBarCustomerService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SideBar\SideBarKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SideBar\SideBarKasir.Designer.cs">
+      <DependentUpon>SideBarKasir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SideBar\SideBarOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SideBar\SideBarOwner.Designer.cs">
+      <DependentUpon>SideBarOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SideBar\SideBarQualityControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SideBar\SideBarQualityControl.Designer.cs">
+      <DependentUpon>SideBarQualityControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\pengiriman\FormPengiriman.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\pengiriman\FormPengiriman.Designer.cs">
+      <DependentUpon>FormPengiriman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\pengiriman\Pengiriman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\pengiriman\Pengiriman.Designer.cs">
+      <DependentUpon>Pengiriman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\DetailPenjualan.cs" />
+    <Compile Include="Transaksi\Penjualan\DetailPromo.cs" />
+    <Compile Include="Transaksi\Penjualan\FormPenjualan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\FormPenjualan.Designer.cs">
+      <DependentUpon>FormPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\ListShowProduk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\ListShowProduk.Designer.cs">
+      <DependentUpon>ListShowProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\Penjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\Penjualan.Designer.cs">
+      <DependentUpon>Penjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\ProdukInCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\ProdukInCart.Designer.cs">
+      <DependentUpon>ProdukInCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\ReturProduk\Detail Retur.cs" />
+    <Compile Include="Transaksi\ReturProduk\ReturBarang.cs" />
+    <Compile Include="Transaksi\ReturProduk\ReturProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\ReturProduk\ReturProduk.Designer.cs">
+      <DependentUpon>ReturProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\StokKeluar\CardStokKeluar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\StokKeluar\CardStokKeluar.Designer.cs">
+      <DependentUpon>CardStokKeluar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\StokKeluar\StockKeluar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\StokKeluar\StockKeluar.Designer.cs">
+      <DependentUpon>StockKeluar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboard\DashboardAdmin.resx">
+      <DependentUpon>DashboardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\DashboardCS.resx">
+      <DependentUpon>DashboardCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\DashboardKasir.resx">
+      <DependentUpon>DashboardKasir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\DashboardQC.resx">
+      <DependentUpon>DashboardQC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\TransaksiPengiriman\LaporanPengiriman.resx">
+      <DependentUpon>LaporanPengiriman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\TransaksiPengiriman\ReportPengiriman.rdlc" />
+    <EmbeddedResource Include="laporan\TransaksiPenjualan\LaporanPenjualan.resx">
+      <DependentUpon>LaporanPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\TransaksiPenjualan\ReportPenjualan.rdlc" />
+    <EmbeddedResource Include="laporan\TransaksiRetur\LaporanReturBarang.resx">
+      <DependentUpon>LaporanReturBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\TransaksiRetur\ReportReturBarang.rdlc" />
+    <EmbeddedResource Include="laporan\TransaksiStok\LaporanStokKeluar.resx">
+      <DependentUpon>LaporanStokKeluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\TransaksiStok\ReportStokKeluar.rdlc" />
+    <EmbeddedResource Include="Master\jenis produk\JenisProduk.resx">
+      <DependentUpon>JenisProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Karyawan\FormKaryawan.resx">
+      <DependentUpon>FormKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Karyawan\Karyawan.resx">
+      <DependentUpon>Karyawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Metode Pembayaran\MetodePembayaran.resx">
+      <DependentUpon>MetodePembayaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Produk\FormProduk.resx">
+      <DependentUpon>FormProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Produk\Produk.resx">
+      <DependentUpon>Produk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Promo\Promo.resx">
+      <DependentUpon>Promo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Setting\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SideBar\SideBarAdmin.resx">
+      <DependentUpon>SideBarAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SideBar\navBarAdmin.resx">
+      <DependentUpon>navBarAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SideBar\SideBarCustomerService.resx">
+      <DependentUpon>SideBarCustomerService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SideBar\SideBarKasir.resx">
+      <DependentUpon>SideBarKasir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SideBar\SideBarOwner.resx">
+      <DependentUpon>SideBarOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SideBar\SideBarQualityControl.resx">
+      <DependentUpon>SideBarQualityControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\pengiriman\FormPengiriman.resx">
+      <DependentUpon>FormPengiriman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\pengiriman\Pengiriman.resx">
+      <DependentUpon>Pengiriman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Penjualan\FormPenjualan.resx">
+      <DependentUpon>FormPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Penjualan\ListShowProduk.resx">
+      <DependentUpon>ListShowProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Penjualan\Penjualan.resx">
+      <DependentUpon>Penjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Penjualan\ProdukInCart.resx">
+      <DependentUpon>ProdukInCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\ReturProduk\ReturProduk.resx">
+      <DependentUpon>ReturProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\StokKeluar\CardStokKeluar.resx">
+      <DependentUpon>CardStokKeluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\StokKeluar\StockKeluar.resx">
+      <DependentUpon>StockKeluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Database\TheFreshChoice.xsc">
+      <DependentUpon>TheFreshChoice.xsd</DependentUpon>
+    </None>
+    <None Include="Database\TheFreshChoice.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TheFreshChoice.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Database\TheFreshChoice.xss">
+      <DependentUpon>TheFreshChoice.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Pict\Backgrounds\login-background.jpg" />
+    <Content Include="Pict\Icons\big_cart_green-icon.png" />
+    <Content Include="Pict\Icons\big_credit_green-icon.png" />
+    <Content Include="Pict\Icons\big_delivery_green-icon.png" />
+    <Content Include="Pict\Icons\big_dollar_green-icon.png" />
+    <Content Include="Pict\Icons\big_home_green-icon.png" />
+    <Content Include="Pict\Icons\big_jproduk_green-icon.png" />
+    <Content Include="Pict\Icons\big_person1_green-icon.png" />
+    <Content Include="Pict\Icons\big_produk_green-icon.png" />
+    <Content Include="Pict\Icons\big_retur_green-icon.png" />
+    <Content Include="Pict\Icons\big_setting_green-icon.png" />
+    <Content Include="Pict\Icons\big_stokkeluar_green-icon.png" />
+    <Content Include="Pict\Icons\delete-icon.png" />
+    <Content Include="Pict\Icons\done-icon.png" />
+    <Content Include="Pict\Icons\edit-icon.png" />
+    <Content Include="Pict\Icons\exit-icon.png" />
+    <Content Include="Pict\Icons\eye-closed.png" />
+    <Content Include="Pict\Icons\eye-open.png" />
+    <Content Include="Pict\Icons\ikon_gambar.png" />
+    <Content Include="Pict\Icons\ikon_unduh.png" />
+    <Content Include="Pict\Icons\plus-icon.png" />
+    <Content Include="Pict\Icons\restore-icon.png" />
+    <Content Include="Pict\Icons\search-icon.png" />
+    <Content Include="Pict\Icons\small_cart_green-icon.png" />
+    <Content Include="Pict\Icons\small_cart_white-icon.png" />
+    <Content Include="Pict\Icons\small_credit_green-icon.png" />
+    <Content Include="Pict\Icons\small_credit_white-icon.png" />
+    <Content Include="Pict\Icons\small_delivery_green-icon.png" />
+    <Content Include="Pict\Icons\small_delivery_white-icon.png" />
+    <Content Include="Pict\Icons\small_dollar_green-icon.png" />
+    <Content Include="Pict\Icons\small_dollar_white-icon.png" />
+    <Content Include="Pict\Icons\small_home_green-icon.png" />
+    <Content Include="Pict\Icons\small_home_white-icon.png" />
+    <Content Include="Pict\Icons\small_jproduk_green-icon.png" />
+    <Content Include="Pict\Icons\small_jproduk_white-icon.png" />
+    <Content Include="Pict\Icons\small_logout_red-icon.png" />
+    <Content Include="Pict\Icons\small_logout_white-icon.png" />
+    <Content Include="Pict\Icons\small_person1-icon_white.png" />
+    <Content Include="Pict\Icons\small_person1_green-icon.png" />
+    <Content Include="Pict\Icons\small_person2_green-icon.png" />
+    <Content Include="Pict\Icons\small_produk_green-icon.png" />
+    <Content Include="Pict\Icons\small_produk_white-icon.png" />
+    <Content Include="Pict\Icons\small_retur_green-icon.png" />
+    <Content Include="Pict\Icons\small_retur_white-icon.png" />
+    <Content Include="Pict\Icons\small_setting_green-icon.png" />
+    <Content Include="Pict\Icons\small_setting_white-icon.png" />
+    <Content Include="Pict\Icons\small_stokkeluar_green-icon.png" />
+    <Content Include="Pict\Icons\small_stokkeluar_white-icon.png" />
+    <Content Include="Pict\Icons\teamPROJ3CT-icon.png" />
+    <Content Include="Pict\Icons\TheFreshChoice-icon.png" />
+    <Content Include="Pict\Icons\upload_produk.jpg" />
+    <Content Include="Pict\Icons\v_icon.png" />
+    <Content Include="Pict\Produk\1750671872886.jpg" />
+    <Content Include="Pict\Produk\1750759839495.jpg" />
+    <Content Include="Pict\Produk\1750832321693.jpg" />
+    <Content Include="Pict\Produk\1750839360372.png" />
+    <Content Include="Pict\Produk\1751268327702.png" />
+    <Content Include="Pict\Produk\1751935903247.png" />
+    <Content Include="Pict\Produk\1752044718592.jpeg" />
+    <Content Include="Pict\Produk\1752477081826.png" />
+    <Content Include="Pict\Produk\1752477166628.png" />
+    <Content Include="Pict\Produk\1752477208212.png" />
+    <Content Include="Pict\Produk\1752477269798.png" />
+    <Content Include="Pict\Produk\1752477346918.png" />
+    <Content Include="Pict\Produk\1752477406389.png" />
+    <Content Include="Pict\Produk\1752477499994.png" />
+    <Content Include="Pict\Produk\1752477592054.png" />
+    <Content Include="Pict\Produk\1752477679554.png" />
+    <Content Include="Pict\Produk\1752478219684.png" />
+    <Content Include="Pict\Produk\1752478262359.png" />
+    <Content Include="Pict\Produk\1752478321909.png" />
+    <Content Include="Pict\Produk\1752478369778.png" />
+    <Content Include="Pict\Produk\1752478427581.png" />
+    <Content Include="Pict\Produk\1752478480778.png" />
+    <Content Include="Pict\Produk\1752478526031.png" />
+    <Content Include="Pict\Produk\1752478569550.png" />
+    <Content Include="Pict\Produk\1752478606959.png" />
+    <Content Include="Pict\Produk\1752478660805.png" />
+    <Content Include="Pict\Produk\1752479448036.png" />
+    <Content Include="Pict\Produk\1752479500622.png" />
+    <Content Include="Pict\Produk\1752479550118.png" />
+    <Content Include="Pict\Produk\1752479615769.png" />
+    <Content Include="Pict\Produk\1752479673929.png" />
+    <Content Include="Pict\Produk\1752479724387.png" />
+    <Content Include="Pict\Produk\1752479763379.png" />
+    <Content Include="Pict\Produk\1752480043064.jpeg" />
+    <Content Include="Pict\Produk\1752480084883.jpeg" />
+    <Content Include="Pict\Produk\1752480126472.jpeg" />
+    <Content Include="Pict\Produk\1752480162000.jpeg" />
+    <Content Include="Pict\Produk\1752480237776.jpeg" />
+    <Content Include="Pict\Produk\1752483544719.jpeg" />
+    <Content Include="Pict\Produk\1752483585892.jpeg" />
+    <Content Include="Pict\Produk\1752483641791.jpeg" />
+    <Content Include="Pict\Produk\1752483730559.jpeg" />
+    <Content Include="Pict\Produk\1752483781430.jpeg" />
+    <Content Include="Pict\Produk\1752483833468.jpeg" />
+    <Content Include="Pict\Produk\1752483872198.jpeg" />
+    <Content Include="Pict\Produk\1752483920595.jpeg" />
+    <Content Include="Pict\Produk\1752483990868.jpeg" />
+    <Content Include="Pict\Produk\1752484029045.jpeg" />
+    <Content Include="Pict\Produk\1752484071370.jpeg" />
+    <Content Include="Pict\Produk\1752484123178.jpeg" />
+    <Content Include="Pict\Produk\1752484167383.jpeg" />
+    <Content Include="Pict\Produk\1752484226853.jpeg" />
+    <Content Include="Pict\Produk\1752484280363.jpeg" />
+    <Content Include="Pict\Produk\1752484340942.jpeg" />
+    <Content Include="Pict\Produk\1752484389645.jpeg" />
+    <Content Include="Pict\Produk\1752484430847.jpeg" />
+    <Content Include="Pict\Produk\1752484492834.jpeg" />
+    <Content Include="Pict\Produk\1752484528910.jpeg" />
+    <Content Include="Pict\Produk\1752484566067.jpeg" />
+    <Content Include="Pict\Produk\1752484609528.jpeg" />
+    <Content Include="Pict\Produk\1752484652169.jpeg" />
+    <Content Include="Pict\Produk\1752484704178.jpeg" />
+    <Content Include="Pict\Produk\1752484764594.jpeg" />
+    <Content Include="Pict\Produk\1752484852338.jpeg" />
+    <Content Include="Pict\Produk\1752484908840.jpeg" />
+    <Content Include="Pict\Produk\1752485468418.jpeg" />
+    <Content Include="Pict\Produk\1752485635971.jpeg" />
+    <Content Include="Pict\Produk\1752485676339.jpeg" />
+    <Content Include="Pict\Produk\1752485764217.jpeg" />
+    <Content Include="Pict\Produk\1752486875951.jpeg" />
+    <Content Include="Pict\Produk\1752486950160.jpeg" />
+    <Content Include="Pict\Produk\1752487795617.jpeg" />
+    <Content Include="Pict\Produk\1752488074093.jpeg" />
+    <Content Include="Pict\Produk\1752488138205.jpeg" />
+    <Content Include="Pict\Produk\1752488184720.jpeg" />
+    <Content Include="Pict\Produk\1752488272695.jpeg" />
+    <Content Include="Pict\Produk\1752488320139.jpeg" />
+    <Content Include="Pict\Produk\1752488450145.jpeg" />
+    <Content Include="Pict\Produk\1752488485807.jpeg" />
+    <Content Include="Pict\Produk\1752489841881.jpeg" />
+    <Content Include="Pict\Produk\1752489890396.jpeg" />
+    <Content Include="Pict\Produk\1752489937930.jpeg" />
+    <Content Include="Pict\Produk\1752490024971.jpeg" />
+    <Content Include="Pict\Produk\1752490085342.jpeg" />
+    <Content Include="Pict\Produk\1752490120675.jpeg" />
+    <Content Include="Pict\Produk\1752490207630.jpeg" />
+    <Content Include="Pict\Produk\1752490503149.jpeg" />
+    <Content Include="Pict\Produk\1752490554433.jpeg" />
+    <Content Include="Pict\Produk\1752490590794.jpeg" />
+    <Content Include="Pict\Produk\1752490903666.jpeg" />
+    <Content Include="Pict\Produk\1752490943023.jpeg" />
+    <Content Include="Pict\Produk\1752490972550.jpeg" />
+    <Content Include="Pict\Produk\1752492064509.jpeg" />
+    <Content Include="Pict\Produk\1752492150841.jpeg" />
+    <Content Include="Pict\Produk\1752492215506.jpeg" />
+    <Content Include="Pict\Produk\1752492281712.jpeg" />
+    <Content Include="Pict\Produk\1752492315271.jpeg" />
+    <Content Include="Pict\Produk\1752492362558.jpeg" />
+    <Content Include="Pict\Produk\1752492393855.jpeg" />
+    <Content Include="Pict\Produk\1752492455435.jpeg" />
+    <Content Include="Pict\Produk\1752492537705.jpeg" />
+    <Content Include="Pict\Produk\1752492590368.jpeg" />
+    <Content Include="Pict\Produk\1752492683349.jpeg" />
+    <Content Include="Pict\Produk\1752492729226.jpeg" />
+    <Content Include="Pict\Produk\1752492809459.jpeg" />
+    <Content Include="Pict\Produk\1752492898131.jpeg" />
+    <Content Include="Pict\Produk\1752492933752.jpeg" />
+    <Content Include="Pict\Produk\1752493124820.jpeg" />
+    <Content Include="Pict\Produk\1752493181500.jpeg" />
+    <Content Include="Pict\Produk\1752493314571.jpeg" />
+    <Content Include="Pict\Produk\1752493395336.jpeg" />
+    <Content Include="Pict\Produk\1752493425352.jpeg" />
+    <Content Include="Pict\Produk\1752493459566.jpeg" />
+    <Content Include="Pict\Produk\1752493492251.jpeg" />
+    <Content Include="Pict\Produk\1752493529741.jpeg" />
+    <Content Include="Pict\Produk\1752493566857.jpeg" />
+    <Content Include="Pict\Produk\1752493612943.jpeg" />
+    <Content Include="Pict\Produk\1752493652228.jpeg" />
+    <Content Include="Pict\Produk\1752493687829.jpeg" />
+    <Content Include="Pict\Produk\1752493722152.jpeg" />
+    <Content Include="Pict\Produk\1752493770859.jpeg" />
+    <Content Include="Pict\Produk\1752493776978.jpeg" />
+    <Content Include="Pict\Produk\1752494389291.jpeg" />
+    <Content Include="Pict\Produk\1752494430451.jpeg" />
+    <Content Include="Pict\Produk\1752494479199.jpeg" />
+    <Content Include="Pict\Produk\1752494533787.jpeg" />
+    <Content Include="Pict\Produk\1752494584288.jpeg" />
+    <Content Include="Pict\Produk\1752494620894.jpeg" />
+    <Content Include="Pict\Produk\1752494692295.jpeg" />
+    <Content Include="Pict\Produk\1752494731413.jpeg" />
+    <Content Include="Pict\Produk\1752494768901.jpeg" />
+    <Content Include="Pict\Produk\1752494810649.jpeg" />
+    <Content Include="Pict\Produk\1752494880272.jpeg" />
+    <Content Include="Pict\Produk\1752494921260.jpeg" />
+    <Content Include="Pict\Produk\1752494956929.jpeg" />
+    <Content Include="Pict\Produk\1752495015365.jpeg" />
+    <Content Include="Pict\Produk\1752495051793.jpeg" />
+    <Content Include="Pict\Produk\1752495099130.jpeg" />
+    <Content Include="Pict\Produk\1752495130382.jpeg" />
+    <Content Include="Pict\Produk\1752495353759.jpeg" />
+    <Content Include="Pict\Produk\1752495390759.jpeg" />
+    <Content Include="Pict\Produk\1752495422535.jpeg" />
+    <Content Include="Pict\Produk\1752495471402.jpeg" />
+    <Content Include="Pict\Produk\1752495580087.jpeg" />
+    <Content Include="Pict\Produk\1752501022412.jpeg" />
+    <Content Include="Pict\Produk\1752501083882.jpeg" />
+    <Content Include="Pict\Produk\1752501443400.jpeg" />
+    <Content Include="Pict\Produk\1752501513745.jpeg" />
+    <Content Include="Pict\Produk\1752501871211.jpeg" />
+    <Content Include="Pict\Produk\1752501964951.jpeg" />
+    <Content Include="Pict\Produk\1752502042645.jpeg" />
+    <Content Include="Pict\Produk\1752721893952.png" />
+    <Content Include="Pict\Produk\image_not_found.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
+</Project>
